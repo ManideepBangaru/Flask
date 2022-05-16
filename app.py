@@ -9,8 +9,11 @@ app = Flask(__name__)
 
 @app.route('/')
 
+# def index():
+#     return "<h1> Hello World </h1>"
+
 def index():
-    return "<h1> Hello World </h1>"
+    return render_template("home.html")
 
 # /localhost:5000/user/manideep
 @app.route('/user/<name>')

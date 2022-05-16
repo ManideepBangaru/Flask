@@ -2,7 +2,7 @@ from flask import Flask, flash, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerRangeField
 from wtforms.validators import DataRequired
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 # from functools import update_wrapper
 # from pkg_resources import safe_extra
 # from turtle import st
@@ -67,10 +67,13 @@ def takeIP():
 
         print(name)
         print(age)
+
+        my_cursor.execute("INSERT INTO teamalpha.teamalph_a VALUES (%s,%s);",(name,age))
+        mydb.commit()
+
         form.name.data = ""
         form.age.data = ""
     return render_template("takeInput.html", form=form)
 
 if __name__ == "__main__":
-    
     app.run(debug=True)

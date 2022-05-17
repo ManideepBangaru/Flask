@@ -1,7 +1,3 @@
-<!-- 
-{% for message in get_flashed_messages() %}
-    {{ message }}
-{% endfor %} -->
 <html>
     <head>
         <script>
@@ -13,7 +9,6 @@
     <body>
         <h2> Fill out the details </h2> 
             <form method="POST">
-                <!-- {{ form.hidden_tag() }} -->
                 {{ form.name.label }}
                 {{ form.name() }}
                 <br>
@@ -27,34 +22,3 @@
             </form>
     </body>
 </html>
-
-<!-- <div class="slidecontainer">
-    <label for="myRange"> Select parameter value</label> <br>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    <p>Value: <span id="demo"></span></p>
-    <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-        slider.oninput = function() {
-          output.innerHTML = this.value;
-        }
-    </script>
-</div> 
-</form> -->
-
-<!-- <html>
-    <head>
-    </head>
-    <body>
-       <form method="POST" action="test">
-    <label for="firstName"> Enter your Name : </label>
-    <input type="text" name="firstname">
-    <br>
-    <br>
-    <label for="age"> Enter your Age : </label>
-    <input type="range" min="0" max="100" name="age_slider" oninput="this.nextElementSibling.value = this.value";/>
-    <input type="submit" value="submit"/>
-</form> 
-    </body>
-</html> -->

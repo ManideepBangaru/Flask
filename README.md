@@ -1,2 +1,0 @@
-# LearningFlask
-All about Flask
